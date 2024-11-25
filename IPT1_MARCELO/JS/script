@@ -1,0 +1,16 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.forEach(nav => nav.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
+
+    // Show alert on button click
+    const introText = document.querySelector(".intro-text h1");
+    introText.addEventListener("click", () => {
+        alert("Welcome to Crisamuel Marcelo's Portfolio!");
+    });
+});
